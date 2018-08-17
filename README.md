@@ -1,5 +1,15 @@
 # PublicVagas
 
+É um projeto que visa a publicação de vagas de emprego dsiponíveis no mercado de trabalho;
+
+Esse projeto possui 4 colaboradores:
+
+Márcio Teotônio,
+Matheus Lopes
+Tiago Borges e
+Vivianne Lima;
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
 
 ## Development server
