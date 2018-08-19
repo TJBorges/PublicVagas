@@ -1,0 +1,17 @@
+.vaga{    
+    align-content: flex-start;    
+    margin-left: 256px;
+    margin-right: 78px;    
+}
+
+.barraTitulo{
+    background-color:darkcyan;
+    color: aliceblue;    
+    text-align: center;
+}
+
+.detalhes{
+    text-align: initial;
+    font-style: italic;
+    font-size: 19px;
+}
