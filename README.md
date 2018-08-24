@@ -4,7 +4,7 @@
 
 Esse projeto possui 4 colaboradores:
 
-Márcio Teotônio,
+Márcio Torres,
 Matheus Lopes,
 Tiago Borges e
 Vivianne Lima;
