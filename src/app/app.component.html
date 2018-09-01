@@ -1,9 +1,16 @@
-<div class="barraInicial">
-  <h1 >
-<div> 
-  <div class="titulo">Public Vagas</div> <app-menu></app-menu> </div>  
-  </h1>  
-</div>
-<div>
-    <app-vaga></app-vaga>
+
+<nav *ngIf="mostrarMenu">
+    <div class="nav-wrapper">
+      <a routerLink="/" class="brand-logo">Public Vagas</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li routerLinkActive="active"><a routerLink="/vagasPublicadas" >Vagas Publicadas</a></li>
+        <li routerLinkActive="active"><a (click)="sair()" >Sair</a></li>
+        <li routerLinkActive="active"><a routerLink="/perfil" >Perfil</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+      <router-outlet></router-outlet>
   </div>
+  
+        

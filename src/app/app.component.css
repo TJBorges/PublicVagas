@@ -1,5 +1,3 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
 .barraInicial{
     background-color:darkcyan;
     color: aliceblue;        
@@ -7,4 +5,10 @@
 
 .titulo{
     text-align: center;
+}
+
+nav .nav-wrapper {
+    position: relative;
+    height: 100%;
+    background-color: cadetblue;
 }

@@ -1,22 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppComponent } from 'src/app/app.component';
+import { AuthService } from './auth.service';
+import { Usuario } from './usuario';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router,
-              private appComponent: AppComponent) { }
+  private usuario: Usuario = new Usuario();
+
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
 
   login(){
-    this.router.navigate(['LoginComponent']);
+    //console.log(this.usuario);
+    this.authService.login(this.usuario);
+    
   }
 
 }
