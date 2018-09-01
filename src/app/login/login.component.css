@@ -1,6 +1,12 @@
 
+.barraInicial{
+    background-color:darkcyan;
+    color: aliceblue;
+    margin-left: 0px;
+}
+
 .geral{    
-    background-image: url('backgroundLogin.png');    
+    /* background-image: url('backgroundLogin.png');     */
     
 }
 

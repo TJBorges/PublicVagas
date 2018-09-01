@@ -13,7 +13,8 @@ export class LoginComponent implements OnInit {
 
   private usuario: Usuario = new Usuario();
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService,
+              private router: Router) { }
 
   ngOnInit() {
   }
@@ -22,6 +23,10 @@ export class LoginComponent implements OnInit {
     //console.log(this.usuario);
     this.authService.login(this.usuario);
     
+  }
+
+  telaCadastrar(){
+    this.router.navigate(['/cadastro']);
   }
 
 }

@@ -14,6 +14,8 @@ import { routing } from './app.routing';
 import { InicioComponent } from './inicio/inicio.component';
 import { AuthService } from './login/auth.service';
 import { AuthGuard } from './guards/auth.guard';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { CadastroVagaComponent } from './cadastro-vaga/cadastro-vaga.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AuthGuard } from './guards/auth.guard';
     MeusDadosComponent,
     VagasPublicadasComponent,
     LoginComponent,
-    InicioComponent
+    InicioComponent,
+    CadastroComponent,
+    CadastroVagaComponent
   ],
   imports: [
     BrowserModule,

@@ -6,13 +6,18 @@ import { VagasPublicadasComponent } from "./vagas-publicadas/vagas-publicadas.co
 import { MeusDadosComponent } from "./meus-dados/meus-dados.component";
 import { InicioComponent } from "./inicio/inicio.component";
 import { AuthGuard } from "./guards/auth.guard";
+import { CadastroComponent } from "./cadastro/cadastro.component";
+import { CadastroVagaComponent } from "./cadastro-vaga/cadastro-vaga.component";
 
 
 const APP_ROUTE: Routes = [
+    { path: '', component: InicioComponent, canActivate:[AuthGuard] },
     { path: 'login', component: LoginComponent },
+    { path: 'cadastroVagas', component: CadastroVagaComponent, canActivate:[AuthGuard] },
     { path: 'vagasPublicadas', component: VagasPublicadasComponent, canActivate:[AuthGuard] },
     { path: 'perfil', component: MeusDadosComponent, canActivate:[AuthGuard] },
-    { path: '', component: InicioComponent, canActivate:[AuthGuard] }
+    { path: 'cadastro', component: CadastroComponent }
+    
     
 ];
 

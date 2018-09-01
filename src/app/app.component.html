@@ -1,11 +1,12 @@
 
 <nav *ngIf="mostrarMenu">
     <div class="nav-wrapper">
-      <a routerLink="/" class="brand-logo">Public Vagas</a>
+        <i class="material-icons left">assignment</i><a routerLink="/" class="brand-logo">Public Vagas</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li routerLinkActive="active"><a routerLink="/vagasPublicadas" >Vagas Publicadas</a></li>
-        <li routerLinkActive="active"><a (click)="sair()" >Sair</a></li>
-        <li routerLinkActive="active"><a routerLink="/perfil" >Perfil</a></li>
+          <li routerLinkActive="active"><a routerLink="/cadastroVagas">Cadastrar Vagas<i class="material-icons right">add_circle</i></a></li> 
+        <li routerLinkActive="active"><a routerLink="/vagasPublicadas">Vagas Publicadas<i class="material-icons right">assignment</i></a></li>        
+        <li routerLinkActive="active"><a routerLink="/perfil" >Perfil<i class="material-icons right">person </i></a></li>
+        <li routerLinkActive="active"><a (click)="sair()" >Sair<i class="material-icons right">exit_to_app</i></a></li>
       </ul>
     </div>
   </nav>
