@@ -8,7 +8,7 @@ body {
     width: 250px;
     position: fixed;
     z-index: 1;
-    top: 22px;
+    top: 21px;
     left: 0;
     overflow: hidden;
     background-color: darkcyan;
@@ -32,7 +32,7 @@ body {
 .sidenav .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 105px;
     font-size: 36px;
     margin-left: 50px;
 }
