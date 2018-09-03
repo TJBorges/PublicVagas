@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, EventEmitter, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppComponent } from 'src/app/app.component';
 import { AuthService } from './auth.service';
@@ -21,9 +21,17 @@ export class LoginComponent implements OnInit {
 
   login(){
     //console.log(this.usuario);
-    this.authService.login(this.usuario);
-    
+    this.authService.login(this.usuario);    
   }
+  
+  @HostListener('window:keyup', ['$event'])
+    keyEvent(event: KeyboardEvent) {
+      //console.log(event);
+    
+      if (event.keyCode == 13) {
+        this.login();
+      }
+    }
 
   telaCadastrar(){
     this.router.navigate(['/cadastro']);
