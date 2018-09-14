@@ -16,6 +16,7 @@ import { AuthService } from './login/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CadastroVagaComponent } from './cadastro-vaga/cadastro-vaga.component';
+import { BrMaskerModule } from 'brmasker-ionic-3';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { CadastroVagaComponent } from './cadastro-vaga/cadastro-vaga.component';
     BrowserModule,
     FormsModule,
     routing,
-    MaterializeModule
+    MaterializeModule,
+    BrMaskerModule
+
   ],
   providers: [
     AuthService,
