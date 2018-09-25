@@ -33,12 +33,18 @@
             </div>
 
             <div class="input-field col s12 m12">
-                <i class="material-icons prefix">business_center</i>
+                <i class="material-icons prefix">location_city</i>
                 <input name="endereco" id="endereco" type="text" required >
                 <label for="endereco"> Endereco *</label>
             </div>
 
-            <div class="input-field col s12 m6">
+            <div class="input-field col s12 m3">
+                <i class="material-icons prefix">location_on</i>
+                <input name="cep" id="cep" type="text" required [brmasker]="{mask:'99999-999', len:9 , type: 'num'}">
+                <label for="cep"> CEP *</label>
+            </div>
+
+            <div class="input-field col s12 m12">
                 <i class="material-icons prefix">book</i>
                 <input id="areaatuacao" name="areaatuacao" type="text" required >
                 <label for="areaatuacao">Área de atuação *</label>
