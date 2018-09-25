@@ -32,6 +32,12 @@
                 <label for="nomefantasia">Nome Fantasia *</label>
             </div>
 
+            <div class="input-field col s12 m12">
+                <i class="material-icons prefix">business_center</i>
+                <input name="endereco" id="endereco" type="text" required >
+                <label for="endereco"> Endereco *</label>
+            </div>
+
             <div class="input-field col s12 m6">
                 <i class="material-icons prefix">book</i>
                 <input id="areaatuacao" name="areaatuacao" type="text" required >
@@ -59,7 +65,7 @@
 
 <div class="input-field col s12 m12">
     <i class="material-icons prefix">contacts</i>
-    <input id="telefone" name="telefone" type="text" required placeholder="(99)999999999"[brmasker]="{mask:'(99)999999999', len:13}">
+    <input id="telefone" name="telefone" type="text" required [brmasker]="{mask:'(99)99999-9999', len:14 , type: 'num'}">
     <label for="telefone">Contato *</label>
 </div>
 
