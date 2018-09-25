@@ -16,7 +16,7 @@
         <div class="row">
             <div class="input-field col s12 m10">
                 <i class="material-icons prefix">info</i>
-                <input name="cnpj" id="cnpj" type="text" required  title="Digite o CNPJ no formato nn.nnn.nnn/nnnn-nn" placeholder="00.000.000/0000-00"[brmasker]="{mask:'00.000.000/0000-00', len:18}">
+                <input name="cnpj" id="cnpj" type="text" required  title="Digite o CNPJ no formato nn.nnn.nnn/nnnn-nn" [brmasker]="{ mask:'00.000.000/0000-00', len:18, type: 'num'}">
                 <label for="cnpj">CNPJ *</label>
             </div>
           
