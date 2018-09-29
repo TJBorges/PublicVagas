@@ -2,7 +2,9 @@
 .barraInicial{
     background-color:darkcyan;
     color: aliceblue;
-    margin-left: 0px;
+    margin-bottom: 0;  
+    width: 150rem;
+    
 }
 
 .geral{    
@@ -10,12 +12,19 @@
     
 }
 
+nav .nav-wrapper {
+    position: relative;
+    height: 100%;
+    background-color: cadetblue;
+
+}   
 
 /* Bordered form */
  form {
     margin-top: 100px;
     margin-left: 150px;
     margin-right: 100px;
+    
     /* border: 3px solid #f1f1f1; */
 }
 
