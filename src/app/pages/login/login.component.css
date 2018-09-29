@@ -1,60 +1,32 @@
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
 
-.barraInicial{
+#login {
+    background-color: #eee !important;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    /* z-index: 99999;
+    padding: 20px; */
+  }
+
+  .barraInicial{
     background-color:darkcyan;
     color: aliceblue;
     margin-bottom: 0;  
-    width: 150rem;
+    position: static;
+    border-top: 0;
     
 }
 
-.geral{    
-    /* background-image: url('backgroundLogin.png');     */
-    
+.brand-logo{
+    margin-left: 2rem;
 }
 
-nav .nav-wrapper {
-    position: relative;
-    height: 100%;
-    background-color: cadetblue;
-
-}   
-
-/* Bordered form */
- form {
-    margin-top: 100px;
-    margin-left: 150px;
-    margin-right: 100px;
-    
-    /* border: 3px solid #f1f1f1; */
+.btn waves-effect waves-light{
+    margin-left: 45px;
 }
-
-/* Full-width inputs */
-input[type=text], input[type=password] {
-    width: 60%;
-    margin-left: 0px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    
-    box-sizing: border-box;
-}
-
-/* Add a hover effect for buttons */
-button:hover {
-    opacity: 0.8;
-}
-
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-    background-color: #f44336;
-}
-
-/* Center the avatar image inside this container */
-    /* .imgcontainer {
-        text-align: center;
-        margin: 12px 12px 12px 12px;
-        margin-right: 12px;
-        
-    } */
-
- 
