@@ -1,0 +1,120 @@
+<nav class="barraInicial">
+  <div class="nav-wrapper">
+    <a class="brand-logo">Public Vagas</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a routerLink="/"><i class="material-icons right">arrow_back</i></a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<br><br>
+<form name="formulario" id="formulario">
+    <div class="container">
+        <input type="hidden" name="cd_empresa" id="cd_empresa"/>
+        <div class="row">
+            <div class="input-field col s12 m10">
+                <i class="material-icons prefix">info</i>
+                <input name="cnpj" id="cnpj" type="text" required  title="Digite o CNPJ no formato nn.nnn.nnn/nnnn-nn" [brmasker]="{ mask:'00.000.000/0000-00', len:18, type: 'num'}">
+                <label for="cnpj">CNPJ *</label>
+            </div>
+          
+            <div class="input-field col s12 m12">
+                <i class="material-icons prefix">business_center</i>
+                <input name="razaosocial" id="razaosocial" type="text" required >
+                <label for="razaosocial">Razão Social *</label>
+            </div>
+
+            <div class="input-field col s12 m12">
+                <i class="material-icons prefix">business_center</i>
+                <input name="nomefantasia" id="nomefantasia" type="text" required >
+                <label for="nomefantasia">Nome Fantasia *</label>
+            </div>
+
+            <div class="input-field col s12 m12">
+                <i class="material-icons prefix">location_city</i>
+                <input name="endereco" id="endereco" type="text" required >
+                <label for="endereco"> Endereco *</label>
+            </div>
+
+            <div class="input-field col s12 m3">
+                <i class="material-icons prefix">location_on</i>
+                <input name="cep" id="cep" type="text" required [brmasker]="{mask:'99999-999', len:9 , type: 'num'}">
+                <label for="cep"> CEP *</label>
+            </div>
+
+            <div class="input-field col s12 m12">
+                <i class="material-icons prefix">book</i>
+                <input id="areaatuacao" name="areaatuacao" type="text" required >
+                <label for="areaatuacao">Área de atuação *</label>
+</div>
+
+<!-- <div class="input-field col s12 m6">
+    <select name="porte" id="porte">
+        <option value="" required disabled selected>Selecione o porte atual</option>
+        <option value="1" <?php echo $nr_porte=='1'?'selected':'';?>> 1 - 5 </option>
+        <option value="2" <?php echo $nr_porte=='2'?'selected':'';?>> 6 - 10 </option>
+        <option value="3" <?php echo $nr_porte=='3'?'selected':'';?>> 11 - 50 </option>
+        <option value="4" <?php echo $nr_porte=='4'?'selected':'';?>> 51 - 100 </option>
+        <option value="5" <?php echo $nr_porte=='5'?'selected':'';?>> 101 - 500 </option>
+        <option value="6" <?php echo $nr_porte=='6'?'selected':'';?>> 500 + </option>
+    </select>
+    <label>Porte *</label>
+</div> -->
+
+<div class="input-field col s12 m12">
+    <i class="material-icons prefix">assignment_ind</i>
+    <input id="responsavel" name="responsavel" type="text" >
+    <label for="responsavel">Responsável pelo cadastro</label>
+</div>
+
+<div class="input-field col s12 m12">
+    <i class="material-icons prefix">contacts</i>
+    <input id="telefone" name="telefone" type="text" required [brmasker]="{mask:'(99)99999-9999', len:14 , type: 'num'}">
+    <label for="telefone">Contato *</label>
+</div>
+
+<div class="input-field col s12 m12">
+    <i class="material-icons prefix">email</i>
+    <input type="email" required class="input-text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+    <label for="email">Email *</label>
+</div>
+
+<div class="input-field col s12 m12">
+    <i class="material-icons prefix">language</i>
+    <input id="site" name="site" type="text">
+    <label for="site">Site</label>
+</div>
+
+<div class="input-field col s12 m12">
+    <i class="material-icons prefix">https</i>
+    <input id="senha" name="senha" type="password" required >
+    <label for="senha">Senha *</label>
+</div>
+
+<div class="input-field col s12 m12">
+    <i class="material-icons prefix">https</i>
+    <input id="senhaconfirmacao" name="senhaconfirmacao" type="password" required>
+    <label for="senhaconfirmacao">Confirmar Senha *</label>
+</div>
+
+<div class="input-field col s12 m12">
+    <span id="loader"></span>
+</div>
+
+<div class="input-field col s12 m12">
+    <span id="errMessage"></span>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col s6 m6 offset-s2 offset-m2">
+<button class="btn waves-effect waves-light" type="submit" name="buttonSubmit" id="buttonSubmit">Cadastrar
+    <i class="material-icons right">send</i>
+</button>         
+</div>
+</div>
+</form>
+<br><br>
