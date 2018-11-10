@@ -16,39 +16,39 @@ export class AuthService {
               private empresaService: EmpresaService) { }
 
   login(usuario: Usuario){
-    if (usuario.email == '123' &&
-        usuario.senha == '123'){
+    // if (usuario.email == '123' &&
+    //     usuario.senha == '123'){
 
-          this.usuarioAutenticado = true;
+    //       this.usuarioAutenticado = true;
+    //       this.router.navigate(['/']);
+    //       this.mostrarMenuEmitter.emit(true);
+
+    //     }else{
+    //       this.usuarioAutenticado = false;
+    //       this.mostrarMenuEmitter.emit(false);
+    //     }
+
+    this.empresaService.login(usuario.email, usuario.senha).subscribe(data =>{
+      const response = (data as any);
+      const objeto = JSON.parse(response._body);
+      this.usuario = objeto.sucess;
+
+       if(this.usuario != null ){
+        // this.authService.login(this.usuario);   
+
+        console.log("USER: " + this.usuario);
+        console.log("AUTENT: " +this.usuarioAutenticado);
+        this.usuarioAutenticado = true;
           this.router.navigate(['/']);
           this.mostrarMenuEmitter.emit(true);
-
-        }else{
-          this.usuarioAutenticado = false;
-          this.mostrarMenuEmitter.emit(false);
-        }
-
-    // this.empresaService.login(usuario.email, usuario.senha).subscribe(data =>{
-    //   const response = (data as any);
-    //   const objeto = JSON.parse(response._body);
-    //   this.usuario = objeto.sucess;
-
-      //  if(this.usuario != null ){
-      //   // this.authService.login(this.usuario);   
-
-      //   console.log(this.usuario);
-      //   console.log(this.usuarioAutenticado);
-      //   this.usuarioAutenticado = true;
-      //     this.router.navigate(['/']);
-      //     this.mostrarMenuEmitter.emit(true);
         
-      // }
-      // else{
-      //   console.log("else");
-      // }
-    // },error =>{
-    //  console.log(error);   
-    // })
+      }
+      else{
+        console.log("else");
+      }
+    },error =>{
+     console.log(error);   
+    })
   }
 
   usuarioLogado(){

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ServicosProvider {
   
-  public endereco = "http://localhost/talentsweb/api/public/api/";
+  public endereco = "http://localhost/publicvagas/api/public/api/";
   
   constructor(public http: Http) 
   {}
