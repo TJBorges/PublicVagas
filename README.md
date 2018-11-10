@@ -2,8 +2,10 @@
 
 É um projeto que visa a publicação de vagas de emprego dsiponíveis no mercado de trabalho;
 
-Esse projeto possui 4 colaboradores:
+Esse projeto possui 5 colaboradores:
 
+
+Gabriel Rodrigo,
 Márcio Torres,
 Matheus Lopes,
 Tiago Borges e

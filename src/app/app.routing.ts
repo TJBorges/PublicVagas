@@ -9,14 +9,15 @@ import { AuthGuard } from "./guards/auth.guard";
 import { CadastroComponent } from "./pages/cadastro/cadastro.component";
 import { CadastroVagaComponent } from "./pages/cadastro-vaga/cadastro-vaga.component";
 
-
+ 
 const APP_ROUTE: Routes = [
     { path: '', component: InicioComponent, canActivate:[AuthGuard] },
     { path: 'login', component: LoginComponent },
     { path: 'cadastroVagas', component: CadastroVagaComponent, canActivate:[AuthGuard] },
     { path: 'vagasPublicadas', component: VagasPublicadasComponent, canActivate:[AuthGuard] },
     { path: 'perfil', component: MeusDadosComponent, canActivate:[AuthGuard] },
-    { path: 'cadastro', component: CadastroComponent }
+    { path: 'cadastro', component: CadastroComponent},
+  
     
     
 ];
