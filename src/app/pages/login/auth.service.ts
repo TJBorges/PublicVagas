@@ -28,12 +28,16 @@ export class AuthService {
     //       this.mostrarMenuEmitter.emit(false);
     //     }
 
-    this.empresaService.login(usuario.email, usuario.senha).subscribe(data =>{
+    this.empresaService.login(usuario).subscribe(data =>{
       const response = (data as any);
       const objeto = JSON.parse(response._body);
       this.usuario = objeto.sucess;
 
-       if(this.usuario != null ){
+      console.log("User");
+      console.log(usuario);    
+      console.log("this.User");
+      console.log(this.usuario);
+       if(this.usuario != null){
         // this.authService.login(this.usuario);   
 
         console.log("USER: " + this.usuario);
