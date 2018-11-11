@@ -11,6 +11,11 @@ import { EmpresaService } from '../../providers/empresa/empresa.service';
 })
 export class LoginComponent implements OnInit {
 
+  usuarioL: any={
+    email: "123",
+    senha: "123"
+  }
+
   public email : string;
   public senha : string;
    private usuario: Usuario = new Usuario();

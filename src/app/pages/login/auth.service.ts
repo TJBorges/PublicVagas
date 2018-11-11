@@ -33,18 +33,18 @@ export class AuthService {
       const objeto = JSON.parse(response._body);
       this.usuario = objeto.sucess;
 
-      console.log("User");
-      console.log(usuario);    
-      console.log("this.User");
-      console.log(this.usuario);
+      // console.log("User");
+      // console.log(usuario);    
+      // console.log("this.User");
+      // console.log(this.usuario);
        if(this.usuario != null){
         // this.authService.login(this.usuario);   
-
-        console.log("USER: " + this.usuario);
-        console.log("AUTENT: " +this.usuarioAutenticado);
+        // console.log("USER: " + this.usuario);
+        // console.log("AUTENT: " +this.usuarioAutenticado);
         this.usuarioAutenticado = true;
           this.router.navigate(['/']);
           this.mostrarMenuEmitter.emit(true);
+
         
       }
       else{

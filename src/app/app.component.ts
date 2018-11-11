@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './pages/login/auth.service';
+import { Usuario } from './pages/login/usuario';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { AuthService } from './pages/login/auth.service';
 export class AppComponent {
 
   mostrarMenu: boolean = false;
+  usuario: Usuario;
 
   constructor(private authService: AuthService){
 
@@ -18,6 +20,7 @@ export class AppComponent {
     this.authService.mostrarMenuEmitter.subscribe(
       mostrar => this.mostrarMenu = mostrar
     );
+    //this.usuario = 
   }
 
   sair(){

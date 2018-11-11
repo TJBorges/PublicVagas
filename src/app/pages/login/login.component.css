@@ -30,3 +30,9 @@
 .btn waves-effect waves-light{
     margin-left: 45px;
 }
+
+/*Validações*/
+
+/* .ng-invalid.ng-touched:not(form){
+    border: 2px solid red;
+} */

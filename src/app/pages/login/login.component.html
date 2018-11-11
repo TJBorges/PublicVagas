@@ -16,14 +16,20 @@
                 <div class="card-title"><b>Login</b></div>
                 <form class="row" autocomplete="on" (submit)='login()'>
                     <div class="input-field col s12">
-                        <input name="email" [(ngModel)]="usuario.email" type="email" id="email" class="validate"
-                            placeholder="Informe seu email..." required>
+                        <input id="email" name="email" [(ngModel)]="usuario.email" type="email" id="email" class="validate"
+                            placeholder="Informe seu email..." required #email="ngModel" >
                         <label for="email" class="active">Email</label>
+                        <div *ngIf="!email.valid && email.touched">
+                            O email é obrigatório!
+                        </div>                                                
                     </div>
                     <div class="input-field col s12">
-                        <input name="password" [(ngModel)]="usuario.senha" type="password" id="senha" class="validate"
-                            placeholder="Informe sua senha" required>
+                        <input id="password" name="password" [(ngModel)]="usuario.senha" type="password" id="senha" class="validate"
+                            placeholder="Informe sua senha" required #password="ngModel">
                         <label for="password" class="active">Senha</label>
+                        <div *ngIf="!password.valid && password.touched">
+                                A senha é obrigatória!
+                            </div>        
                     </div>
 
                     <button class="btn waves-effect waves-light" type="submit" name="action" (click)="login()">Entrar<i
