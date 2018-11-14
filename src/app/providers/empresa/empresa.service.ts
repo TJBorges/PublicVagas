@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { ServicosProvider } from '../servicos';
-import { Usuario } from 'src/app/pages/login/usuario';
+import { Usuario } from 'src/app/basic/usuario';
 
 
 @Injectable({

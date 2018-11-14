@@ -12,4 +12,8 @@ export class CadastroComponent implements OnInit {
   ngOnInit() {
   }
 
+  salvarEmpresa(form){
+    console.log("Console");    
+    console.log(form);
+  }
 }

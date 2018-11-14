@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
-import { Usuario } from './usuario';
+import { Usuario } from '../../basic/usuario';
 import { EmpresaService } from '../../providers/empresa/empresa.service';
 
 @Component({
@@ -10,11 +10,6 @@ import { EmpresaService } from '../../providers/empresa/empresa.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  usuarioL: any={
-    email: "123",
-    senha: "123"
-  }
 
   public email : string;
   public senha : string;

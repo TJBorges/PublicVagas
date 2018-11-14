@@ -1,5 +1,5 @@
 import { Injectable, EventEmitter } from '@angular/core';
-import { Usuario } from './usuario';
+import { Usuario } from '../../basic/usuario';
 import { Router } from '@angular/router';
 import { EmpresaService } from '../../providers/empresa/empresa.service';
 

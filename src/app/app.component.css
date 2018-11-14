@@ -3,6 +3,9 @@
     color: aliceblue;        
 }
 
+.brand-logo{
+    position: relative;
+}
 .titulo{
     text-align: center;
 }
@@ -10,5 +13,5 @@
 nav .nav-wrapper {
     position: relative;
     height: 100%;
-    background-color: cadetblue;
+    background-color: darkcyan;
 }
