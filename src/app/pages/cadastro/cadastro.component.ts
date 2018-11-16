@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Empresa } from 'src/app/basic/empresa';
+import { CadastroGuardService } from './cadastro-guard.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -7,13 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
-  constructor() { }
+  private empresa: Empresa = new Empresa();
+  constructor(private cadastroGuardService: CadastroGuardService) { }
 
   ngOnInit() {
   }
 
-  salvarEmpresa(form){
+  salvarEmpresa(){
     console.log("Console");    
-    console.log(form);
+    console.log(this.empresa);  
+    this.cadastroGuardService.salvarEmpresa(this.empresa)    
   }
 }

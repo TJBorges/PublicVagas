@@ -9,13 +9,13 @@ import { EmpresaService } from '../../providers/empresa/empresa.service';
 export class AuthService {
 
   private usuarioAutenticado: boolean = false;
-  mostrarMenuEmitter= new EventEmitter<boolean>();
+  mostrarMenuEmitter = new EventEmitter<boolean>();
   private usuario: Usuario;
 
   constructor(private router: Router,
-              private empresaService: EmpresaService) { }
+    private empresaService: EmpresaService) { }
 
-  login(usuario: Usuario){
+  login(usuario: Usuario) {
     // if (usuario.email == '123' &&
     //     usuario.senha == '123'){
 
@@ -28,38 +28,29 @@ export class AuthService {
     //       this.mostrarMenuEmitter.emit(false);
     //     }
 
-    this.empresaService.login(usuario).subscribe(data =>{
+    this.empresaService.login(usuario).subscribe(data => {
       const response = (data as any);
       const objeto = JSON.parse(response._body);
       this.usuario = objeto.sucess;
 
-      // console.log("User");
-      // console.log(usuario);    
-      // console.log("this.User");
-      // console.log(this.usuario);
-       if(this.usuario != null){
-        // this.authService.login(this.usuario);   
-        // console.log("USER: " + this.usuario);
-        // console.log("AUTENT: " +this.usuarioAutenticado);
+      if (this.usuario != null) {
         this.usuarioAutenticado = true;
-          this.router.navigate(['/']);
-          this.mostrarMenuEmitter.emit(true);
-
-        
+        this.router.navigate(['/']);
+        this.mostrarMenuEmitter.emit(true);
       }
-      else{
+      else {
         console.log("else");
       }
-    },error =>{
-     console.log(error);   
+    }, error => {
+      console.log(error);
     })
   }
 
-  usuarioLogado(){
+  usuarioLogado() {
     return this.usuarioAutenticado;
   }
 
-  sair(){
+  sair() {
     this.usuarioAutenticado = false;
     this.mostrarMenuEmitter.emit(false);
     this.router.navigate(['/login']);
