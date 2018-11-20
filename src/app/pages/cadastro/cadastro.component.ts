@@ -15,9 +15,7 @@ export class CadastroComponent implements OnInit {
   ngOnInit() {
   }
 
-  salvarEmpresa(){
-    console.log("Console");    
-    console.log(this.empresa);  
+  salvarEmpresa(){      
     this.cadastroGuardService.salvarEmpresa(this.empresa)    
   }
 }

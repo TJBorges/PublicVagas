@@ -11,7 +11,7 @@ export class CargoService {
     private URL: ServicosProvider) { }
 
   listarCargos() {
-   return this.http.get(this.URL.endereco + `/cargos`);
+   return this.http.get(this.URL.endereco + `cargos`);
 
   }
 }

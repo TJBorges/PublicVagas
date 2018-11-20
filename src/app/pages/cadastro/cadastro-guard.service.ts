@@ -14,27 +14,14 @@ export class CadastroGuardService {
 
 
   salvarEmpresa(empresa: Empresa) {
-    // if (usuario.email == '123' &&
-    //     usuario.senha == '123'){
-
-    //       this.usuarioAutenticado = true;
-    //       this.router.navigate(['/']);
-    //       this.mostrarMenuEmitter.emit(true);
-
-    //     }else{
-    //       this.usuarioAutenticado = false;
-    //       this.mostrarMenuEmitter.emit(false);
-    //     }
-
     this.empresaService.salvar(empresa).subscribe(data => {
       const response = (data as any);
       const objeto = JSON.parse(response._body);
       this.sucessoCadastro = objeto.sucess;
 
       if (this.sucessoCadastro != null) {
-        //this.usuarioAutenticado = true;
-        this.router.navigate(['/login']);
-        //this.mostrarMenuEmitter.emit(true);
+        console.log(this.sucessoCadastro);        
+        this.router.navigate(['/login']);        
       }
       else {        
         console.log("else");

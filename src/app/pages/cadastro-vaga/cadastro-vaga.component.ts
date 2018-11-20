@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { VagaService } from 'src/app/providers/vaga/vaga.service';
 import { Vaga } from 'src/app/basic/vaga';
+import { CargoService } from 'src/app/providers/cargo/cargo.service';
 
 @Component({
   selector: 'app-cadastro-vaga',
@@ -10,18 +11,27 @@ import { Vaga } from 'src/app/basic/vaga';
 export class CadastroVagaComponent implements OnInit {
 
   private vaga: Vaga;
-  constructor(private vagaService: VagaService) { }
+  private cargos: any;
+  constructor(private vagaService: VagaService,
+    private cargoService: CargoService) { }
 
   ngOnInit() {
   }
 
-  onSubmit(form){
+  onSubmit(form) {
     console.log(form.value.titulo);
   }
 
   cadastrar() {
-
     this.vagaService.cadastraVaga()
   }
 
+  listarCargos() {
+    console.log(this.cargoService.listarCargos());
+    this.cargoService.listarCargos().subscribe(data => {
+      const response = (data as any);
+      const objeto = JSON.parse(response._body);
+      this.cargos = objeto.sucess;
+    });
+  }
 }
