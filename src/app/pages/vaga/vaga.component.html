@@ -1,11 +1,24 @@
-<header class="vaga">
+<header  class="vaga" >
+    <!-- *ngFor="let vaga of vaga_teste" -->
     <h1> 
-    <div class="barraTitulo">Titulo da Vaga</div>  
+    <div class="barraTitulo">{{ vaga_teste.titulo }}</div>  
     </h1>  
 
     <div classe="detalhes">      
       <h5>
           <strong>Detalhamento da Vaga:</strong>
       </h5>
+      <div>
+        <h5><strong>Cargo: </strong><strong>{{ vaga_teste.cargo }} </strong></h5>
+        <label>Tipo de Contratação: </label>  <label>{{ vaga_teste.tp_contratacao }}  </label> <br>
+        <label>Valor do Salário:    </label>  <label>{{ vaga_teste.vl_salario }}      </label> <br>
+        <label>Quantidade de Vagas: </label>  <label>{{ vaga_teste.nr_qtd_vaga }}     </label> <br>
+        <label>Experiência:         </label>  <label>{{ vaga_teste.experiencia }}     </label> <br>
+        <label>Benefícios:          </label>  <label>{{ vaga_teste.beneficios }}      </label> <br>
+        <label>Observação:         </label>  <label>{{ vaga_teste.observacao }}       </label> <br>
+        <label>Segunda Etapa:       </label>  <label>{{ vaga_teste.segunda_etapa }}   </label> <br>
+
+      </div>
     </div>
+    <br><br>
   </header>

@@ -13,22 +13,23 @@
 
         <div class="container">
             <div class="row">
-                <div class="input-field col s12 m12">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">text_fields</i>
                     <input id="titulo" name="titulo" type="text" class="validate" minlength="3" required #titulo="ngModel" ngModel>
                     <label for="titulo">Título da vaga</label>
-                    <!-- <div *ngIf="!titulo.valid && titulo.touched">
-                            O título é obrigatório!
-                        </div>   -->
+                    
+                    <div *ngIf="!titulo.valid && titulo.touched">
+                            O Título é obrigatório!
+                        </div>  
                 </div>
 
-                <div class="input-field col s12 m12">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">toc</i>
                     <input id="cargo" name="cargo" type="text" class="validate" minlength="3" required ngModel>
                     <label for="titulo">Cargo</label>
-                </div>
+                </div>          
 
-                <div class="input-field col s12 m12">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">create</i>
                     <input id="contratacao" name="contratacao" type="text" class="validate" minlength="3" required>
                     <label for="titulo">Contratação</label>
@@ -46,27 +47,28 @@
                     <label for="quantidadevagas">Quantidade de vagas</label>
                 </div>              
 
-                <div class="input-field col s12 m12">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">event_note</i>
                     <input id="experiencia" name="experiencia" type="text" class="validate" minlength="3" required ngModel>
                     <label for="titulo">Experiência</label>
                 </div>
 
-                <div class="input-field col s12 m12">
+                <div class="input-field col s12">
                     <textarea name="beneficios" id="beneficios" class="materialize-textarea" minlength="5" required ngModel></textarea>
                     <label for="beneficios">Benefícios</label>
                 </div>
 
-                <div class="input-field col s12 m12">
+                <div class="input-field col s12">
                     <textarea name="descricao_atividades" id="descricao_atividades" class="materialize-textarea" minlength="10" required ngModel></textarea>
                     <label for="observacao">Descrição das atividades</label>
                 </div>
 
-                <div class="input-field col s12 m12">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">filter_2</i>                  
                     <textarea name="segunda_etapa" id="segunda_etapa" class="materialize-textarea" minlength="10" required ngModel></textarea>
                     <label for="segunda_etapa">Instruções segunda etapa *¹</label>
-                </div>
+                </div>                
+                
             </div>
         </div>
 
@@ -76,7 +78,13 @@
                     <i class="material-icons right">send</i>
                 </button>         
                 </div>
-        </div>
+                <div>
+                <select >
+                    <option> 15689 </option>
+                  </select>
+                </div>
+        </div>        
         </form>
         </div>
-        <br><br>        
+        <br><br>     
+           
